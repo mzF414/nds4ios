@@ -27,6 +27,10 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
         if (game) [games addObject:game];
     }
     
+    NSString *gameFilePath = [[NSBundle mainBundle] pathForResource:@"fireEmblemLightAndShadow" ofType:@".nds"];
+    NDSGame *game = [NDSGame gameWithPath:gameFilePath saveStateDirectoryPath:saveStatePath];
+    if (game) [games addObject:game];
+    
     return [NSArray arrayWithArray:games];
 }
 

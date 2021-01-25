@@ -22,6 +22,7 @@
 		28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6ED1787D110003A9C5B /* Defaults.plist */; };
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
+		2EC4AFF5259D7A5900B5D158 /* fireEmblemLightAndShadow.nds in Resources */ = {isa = PBXBuildFile; fileRef = 2EC4AFF4259D7A5900B5D158 /* fireEmblemLightAndShadow.nds */; };
 		4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3F2AEC178E017600AE10B8 /* Twitter.framework */; };
 		4CA7846817B31BA000097BC4 /* Default-Landscape@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7846717B31BA000097BC4 /* Default-Landscape@2x~iPad.png */; };
 		4CA7846A17B31BA500097BC4 /* Default-Landscape~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7846917B31BA500097BC4 /* Default-Landscape~iPad.png */; };
@@ -239,6 +240,7 @@
 		28E7A6ED1787D110003A9C5B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = nds4ios/settings/Defaults.plist; sourceTree = SOURCE_ROOT; };
 		28E7A6F31787D8D5003A9C5B /* HideEmulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideEmulator.png; path = Resources/HideEmulator.png; sourceTree = "<group>"; };
 		28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HideEmulator@2x.png"; path = "Resources/HideEmulator@2x.png"; sourceTree = "<group>"; };
+		2EC4AFF4259D7A5900B5D158 /* fireEmblemLightAndShadow.nds */ = {isa = PBXFileReference; lastKnownFileType = file; path = fireEmblemLightAndShadow.nds; sourceTree = "<group>"; };
 		4C3F2AEC178E017600AE10B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		4CA7846717B31BA000097BC4 /* Default-Landscape@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~iPad.png"; path = "Resources/required/Default-Landscape@2x~iPad.png"; sourceTree = "<group>"; };
 		4CA7846917B31BA500097BC4 /* Default-Landscape~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~iPad.png"; path = "Resources/required/Default-Landscape~iPad.png"; sourceTree = "<group>"; };
@@ -630,6 +632,14 @@
 			name = "math-neon";
 			sourceTree = "<group>";
 		};
+		2EC4AFF3259D7A4300B5D158 /* games */ = {
+			isa = PBXGroup;
+			children = (
+				2EC4AFF4259D7A5900B5D158 /* fireEmblemLightAndShadow.nds */,
+			);
+			name = games;
+			sourceTree = "<group>";
+		};
 		8B283062178DDC4B00E92785 /* Donation */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,6 +784,7 @@
 		BF9D515517865E1300B5864B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2EC4AFF3259D7A4300B5D158 /* games */,
 				9CFFEB7518B48C7C00F80903 /* Images.xcassets */,
 				8B28304E178DD27000E92785 /* 19-gear.png */,
 				8B28304F178DD27000E92785 /* 19-gear@2x.png */,
@@ -1316,6 +1327,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				fr,
 				"zh-Hans",
@@ -1365,6 +1377,7 @@
 				28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */,
 				BF9D516A17867F7D00B5864B /* DPad.png in Resources */,
 				28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */,
+				2EC4AFF5259D7A5900B5D158 /* fireEmblemLightAndShadow.nds in Resources */,
 				BF9D516B17867F7D00B5864B /* DPad@2x.png in Resources */,
 				8BEA0939178724E10060B347 /* Default.png in Resources */,
 				BF9D516C17867F7D00B5864B /* JoystickBackground.png in Resources */,
@@ -1630,7 +1643,7 @@
 					"$(SRCROOT)/",
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DANDROID",
@@ -1678,7 +1691,7 @@
 					"$(SRCROOT)/",
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DANDROID",

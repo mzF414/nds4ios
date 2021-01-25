@@ -144,7 +144,7 @@
     [AppDelegate sharedInstance].currentEmulatorViewController = emulatorViewController;
     SASlideMenuRootViewController *rootViewController = (SASlideMenuRootViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     [rootViewController doSlideIn:nil];
-    [rootViewController presentModalViewController:emulatorViewController animated:YES];
+    [rootViewController presentViewController:emulatorViewController animated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

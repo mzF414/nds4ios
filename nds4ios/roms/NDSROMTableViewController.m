@@ -56,7 +56,9 @@
     [nc addObserver:self selector:@selector(reloadGames:) name:NDSGameSaveStatesChangedNotification object:nil];
     [nc addObserver:self selector:@selector(reloadGames:) name:kDocumentChanged object:docWatchHelper];
     
-    [self reloadGames:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self reloadGames:nil];
+    });
 }
 
 - (void)didReceiveMemoryWarning
